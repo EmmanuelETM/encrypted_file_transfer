@@ -27,6 +27,17 @@
 ## How to Run the Project
 
 ### 1. **Run the Server:**
-   - In one terminal, navigate to the directory where `server.py` is located and run the following command to start the server:
-   ```bash
-   python network/server.py
+- In one terminal, navigate to the directory where `server.py` is located and run the following command to start the server:
+```bash
+python network/server.py
+```
+### 2. Run the Client:
+In another terminal, navigate to the directory where main.py is located and run the following command to start the client:
+```bash
+python main.py
+```
+The client will ask for the file path to encrypt, then request the key to encrypt the file. After encryption, it will ask if you want to send the file to the server.
+
+### 3. Transfer Process:
+The client sends the encrypted file to the server.
+The server receives the file and saves it as received_text.txt in the directory where the server script is running.
