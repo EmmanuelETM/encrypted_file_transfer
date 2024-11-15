@@ -13,6 +13,20 @@
 - Python 3.x
 - No additional dependencies are required, as everything is implemented in pure Python (without external libraries).
 
-#### Project Structure
 
-/your-project-directory ├── encrypt/ │ ├── encrypt.py # Functions for encrypting and decrypting files │ ├── manage_file.py # Functions for reading and writing files │ └── validate.py # Functions for validating file paragraphs ├── network/ │ ├── client.py # Client code for sending the encrypted file │ └── server.py # Server code for receiving the file ├── main.py # Main script to run the client and server └── README.md # This file
+## How It Works
+
+### 1. **Client:**
+   - The client reads a text file, encrypts it using a secret key provided by the user, and saves the encrypted file in the current directory as `encrypted_output.txt`.
+   - Then, it offers the option to send the encrypted file to a server via a network connection.
+
+### 2. **Server:**
+   - The server waits to receive the encrypted file from a client.
+   - Once it receives the file, it saves it in the directory where the script is running as `received_text.txt`.
+
+## How to Run the Project
+
+### 1. **Run the Server:**
+   - In one terminal, navigate to the directory where `server.py` is located and run the following command to start the server:
+   ```bash
+   python network/server.py
